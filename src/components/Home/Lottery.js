@@ -399,18 +399,18 @@ useEffect(() => {
                       <img src={st1} alt="" className="static-icon"/>
                     </div>
                     <div className="static-right">
-                      {blockchain.account == null || data.roundID.toString() == 0 ? <h4 className="stt-title">result 0 th </h4> : <h4 className="stt-title">result {data.roundID.toString() - 1}th </h4>  }
+                      {blockchain.account == null || data.roundID.toString() == 0 ? <h4 className="stt-title ">result 0 th </h4> : <h4 className="stt-title ">result {data.roundID.toString() - 1}th </h4>  }
                       <div className="stt-count">
-                        <img src={cup} alt="" className="cup"/>
+                        {/* <img src={cup} alt="" className="cup"/> */}
                         <span className="">
                           { data.rounds.map((round ,key) => {
                             if (round.id.toString() == data.roundID.toString() - 1) {
                             return( 
                               <div key ={key} className="result-number">
-                                <input type='button'  className="reslt-number" value={round.number[0].toString()} />
-                                <input type='button'  className="reslt-number" value={round.number[1].toString()} />
-                                <input type='button'  className="reslt-number" value={round.number[2].toString()} />
-                                <input type='button'  className="reslt-number result-number-text" value={round.coefficient} />
+                                <input type='button'  className="reslt-number reslt-number-kq " value={round.number[0].toString()} />
+                                <input type='button'  className="reslt-number reslt-number-kq" value={round.number[1].toString()} />
+                                <input type='button'  className="reslt-number reslt-number-kq" value={round.number[2].toString()} />
+                                <input type='button'  className="reslt-number result-number-text reslt-number-kq" value={round.coefficient} />
                                 
                               </div>
                             )
@@ -427,7 +427,7 @@ useEffect(() => {
                       <img src={st1} alt="" className="static-icon"/>
                     </div>
                     <div className="static-right">
-                      <h4 className="stt-title">PURCHASED TICKETS</h4>
+                      <h4 className="stt-title ">PURCHASED TICKETS</h4>
                       <div className="stt-count">
                         <img src={tikit} alt="" className=""/>
                         <span className="purchased">{data.TotalTiket}</span>

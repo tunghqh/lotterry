@@ -467,7 +467,7 @@ function Game() {
             <div className="ticket-free">Your free ticket : {data.Ves} </div>                        
               <h1>GAME IS RUNNING IN DEMO MODE</h1>
               <div className="result-lottery-game">
-                <h4 className="stt-title">result {data.roundID.toString() - 1}th </h4>
+                <h4 className="stt-title stt-title-game">result {data.roundID.toString() - 1}th </h4>
                 <span className="">
                     { data.rounds.map((round ,key) => {
                       if (round.id.toString() == data.roundID.toString() - 1) {
@@ -593,7 +593,7 @@ function Game() {
             <div className="ticket-free">Your free ticket : {data.Ves} </div>
             <div className="tangFreeTicket" >
               <input type='text' placeholder="Send the ticket to your friend's wallet" className="enterAddress" onChange={e => setToAddress(e.target.value)}  required/>
-              <input type='number' placeholder="Tickets" className="enterQuantily" onChange={e => setQuantilyFreeTicket(e.target.value)} required/>
+              <input type='number' placeholder="Quantily" className="enterQuantily" onChange={e => setQuantilyFreeTicket(e.target.value)} required/>
 
               { !loadingTranfer ? <button className="btn btn-tranfer" onClick={sumit_Tranfer}>Tranfer</button> : <button className=" tranfer-loading btn-loading" />}
             </div>

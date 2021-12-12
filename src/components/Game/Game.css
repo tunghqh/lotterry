@@ -216,6 +216,9 @@
     top: 19px;
     right: 334px;
 }
+.stt-title-game {
+    text-align: center;
+}
 .rules-right-game {
     width: 400px;
 }
